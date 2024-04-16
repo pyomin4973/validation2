@@ -23,6 +23,6 @@ public class MyHandlerExceptionResolver implements HandlerExceptionResolver {
         } catch (IOException e) {
             log.error("resolver ex", e);
         }
-        return null;
+        return null; // 다른 종류의 예외인 경우 -> null 반환 -> 500 에러로 처리
     }
 }
